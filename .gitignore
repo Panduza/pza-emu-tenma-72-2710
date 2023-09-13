@@ -1,3 +1,8 @@
+# Robot
+log.html
+output.xml
+report.html
+
 # Prerequisites
 *.d
 
@@ -21,6 +26,7 @@
 *.a
 *.la
 *.lo
+pico-sdk
 
 # Shared objects (inc. Windows DLLs)
 *.dll
@@ -50,3 +56,17 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Building repository
+build
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Tests Logs
+tests/robot/log.html
+tests/robot/output.xml
+tests/robot/report.html
+tests/rsc/__pycache__/Client.cpython-310.pyc
