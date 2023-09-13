@@ -13,6 +13,8 @@ To have a solution independent from OS and their implementation specificities
 It does not have many requirements, so you might just clone the repo and run it. install the following package first.
 
 ```
+sudo apt update
+sudo apt install cmake gcc-arm-none-eabi libnewlib-arm-none-eabi  libstdc++-arm-none-eabi-newlib build-essential
 pip install pyserial
 ```
 
