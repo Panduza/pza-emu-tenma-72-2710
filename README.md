@@ -21,7 +21,9 @@ pip install robotframework
 
 # Build the pico firmware
 
-the project can be build with the following commmand, the `cmake` may take a couple of minutes.
+This project has a github actions workflow that build the Pico firmware. 
+
+Othewise the project can be build with the following commmand, the `cmake` may take a couple of minutes.
 
 ```
 cd pico-firmware
@@ -39,6 +41,17 @@ Drag and drop the src/serial.uf2 on the Pico in bootsel mode, or use the followi
 cp src/serial.uf2 /media/<user>/RPI-RP2/
 ```
 # Run test
+
+## 1. Using Robot script
+
+Get the tty port of the pico in /dev, and set the variable **${PORT_NAME}** of the file tenma-control/tenma.robot with the right port.
+
+To lunch the tests run:
+```
+robot -d results/ tenma.robot
+```
+
+## 2. Using python script
 
 Use the script tenma-control/tenma\_72\_2710 to test the pico firmware, you can use the same script to control the **Tenma-72-2710** power supply.
 
