@@ -43,4 +43,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: pza-emu-tenma-72-2710
-        path: pico-firmware/buildbuild/serial.uf2
+        path: pico-firmware/build/src/serial.uf2
