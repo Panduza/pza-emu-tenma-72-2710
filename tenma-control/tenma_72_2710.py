@@ -42,7 +42,7 @@ def main():
         T = instantiate_tenma_class_from_device_response(args["device"], args["debug"])
         
         if args["version"]:
-            print("VERSION ==> ", T.getVersion())
+            print("VERSION ==>", T.getVersion())
 
         if args["off"]:
             if VERB:
