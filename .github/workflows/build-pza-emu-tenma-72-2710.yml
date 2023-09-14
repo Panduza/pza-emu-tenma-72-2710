@@ -37,7 +37,7 @@ jobs:
         make
         
 
-    - run: ls -la build
+    - run: ls -la pico-firmware/build/src
 
     - name: Store artifacts
       uses: actions/upload-artifact@v3
