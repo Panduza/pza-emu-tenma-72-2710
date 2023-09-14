@@ -16,6 +16,7 @@ It does not have many requirements, so you might just clone the repo and run it.
 sudo apt update
 sudo apt install cmake gcc-arm-none-eabi libnewlib-arm-none-eabi  libstdc++-arm-none-eabi-newlib build-essential
 pip install pyserial
+pip install robotframework
 ```
 
 # Build the pico firmware
