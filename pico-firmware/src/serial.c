@@ -18,11 +18,18 @@ typedef struct{
 	float voltage;
 }Tenma_t;
 	
-#define STATE_ON "@"
-#define STATE_OFF "!@"
+#define STATE_ON 	"@"
+#define STATE_OFF 	"!@"
+#define LOW 		0
+#define HIGH 		1
 
 int main() {
 
+	const uint LED_PIN = PICO_DEFAULT_LED_PIN;
+	gpio_init(LED_PIN);
+	gpio_set_dir(LED_PIN, GPIO_OUT);
+	gpio_put(LED_PIN, LOW);
+	
 	Tenma_t tenma={.version="TENMA 72-2710 V6.8 SN:03265065", .state=0, .current=0.f, .voltage=0.f};
 	char serial_input[10], *current_substring, *voltage_substring;
 	
@@ -44,10 +51,12 @@ int main() {
         	else if (!strcmp(serial_input,"OUT0"))
         	{
 			tenma.state = 0;
+			gpio_put(LED_PIN, LOW);
         	}
         	else if (!strcmp(serial_input,"OUT1"))
         	{
 			tenma.state = 1;
+			gpio_put(LED_PIN, HIGH);
         	}
         	else if (!strcmp(serial_input,"ISET1?"))
         	{
