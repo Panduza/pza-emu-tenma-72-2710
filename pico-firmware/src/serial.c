@@ -18,8 +18,8 @@ typedef struct{
 	float voltage;
 }Tenma_t;
 	
-#define STATE_ON 	"@"
-#define STATE_OFF 	"!@"
+#define STATE_ON 	"S"
+#define STATE_OFF 	"0"
 #define LOW 		0
 #define HIGH 		1
 
